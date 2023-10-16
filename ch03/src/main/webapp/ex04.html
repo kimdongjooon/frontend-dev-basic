@@ -49,7 +49,31 @@ body {
 
 .box8 {
 	border: 4px solid;
-
+	/* 
+		4(방향[top,right,bottom,left])  *  3(속성[두께,스타일,컬러]) = 12가지.
+		예제 3가지(top)
+	*/
+	border-top-width: 4px;
+	border-top-style: dotted;
+	border-top-color: blue;
+	
+	/*
+		3가지 속성별 축약형 4가지 
+		3 * 4 = 12
+		예제는 4가지(width)
+	*/
+	border-width: 1px 2px 3px 4px;  /* T R B L*/
+	border-width: 1px 2px 3px;		/* T RL B */
+	border-width: 1px 2px;			/* TB RL  */
+	border-width: 1px ;				/* TRBL   */
+	
+	border-style: dashed dotted solid double;
+	
+	border-color: rebeccapurple rgb(67, 102, 245) black greenyellow;
+	/*
+		보통은, 다음과 같은 방식을 사용한다.
+		4방향 모두 width, style, color가 같다면,
+	*/
 }
 .box9 {
 	border: 4px none;
