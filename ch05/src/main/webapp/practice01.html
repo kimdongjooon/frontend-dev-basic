@@ -14,6 +14,48 @@ body {
 	font-size: 0.75em;
 	color: #333
 }
+
+.tbl-ex{
+	margin: 100px auto;
+	border: 1px solid #333;
+	border-collapse: collapse;
+	border-left-width: 0;
+	border-right-width: 0;
+}
+
+.tbl-ex th, .tbl-ex td{
+	border: 1px solid #333;
+	padding: 4px;
+	border-left-width: 0;
+	border-right-width: 0;
+	
+}
+
+.tbl-ex th{
+	background-color: #999;
+	color: white;
+	font-size: 0.8rem;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+}
+
+.tbl-ex td{
+	border-style: dotted;
+	cursor: pointer;
+}
+
+.tbl-ex tr:hover td, .tbl-ex tr:nth-child(odd):hover td{
+	background-color: #fc6;
+}
+
+.tbl-ex tr.even td{
+	background-color: #e8ecf6;
+}
+
+.tbl-ex tr:nth-child(odd) td{
+	background-color: #e8ecf6;
+}
+
 </style>
 </head>
 <body>
