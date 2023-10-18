@@ -48,9 +48,18 @@ console.log(o.n);
 var i2 = new Number(10);
 var s2 = new String("hello~");
 var b2 = new Boolean(true);
+
 var o2 = new Object();
 var a = new Array();
+var re = new RegExp();
 var d = new Date();
+
+var o3 = {};
+var a2 = [];
+var re2 = /^js$/gi;
+var n = null;
+
+
 
 console.log("변수 i2값: " + i2 + ", 타입: " + typeof(i2) + ", i2 instanceof(Number): "+(i2 instanceof(Number)));
 console.log("변수 s2값: " + s2 + ", 타입: " + typeof(s2) + ", s2 instanceof(String): "+(s2 instanceof(String)));
@@ -58,10 +67,27 @@ console.log("변수 b2값: " + b2 + ", 타입: " + typeof(b2) + ", b2 instanceof
 console.log("변수 o2값: " + o2 + ", 타입: " + typeof(o2) + ", o2 instanceof(Object): "+(o2 instanceof(Object)));
 console.log("변수 a값: " + a + ", 타입: " + typeof(a) + ", a instanceof(Array): "+(a instanceof(Array)));
 console.log("변수 d값: " + d + ", 타입: " + typeof(d) + ", d instanceof(Date): "+(d instanceof(Date)));
+console.log("변수 o3값: " + o3 + ", 타입: " + typeof(o3) + ", o3 instanceof(Object): "+(o3 instanceof(Object)));
+console.log("변수 a2값: " + a2 + ", 타입: " + typeof(a2) + ", a2 instanceof(Array): "+(a2 instanceof(Array)));
+console.log("변수 re2값: " + re2 + ", 타입: " + typeof(re2) + ", re2 instanceof(RegExp): "+(re2 instanceof(RegExp)));
+console.log("변수 n값: " + n + ", 타입: " + typeof(n));
 
 
 
 console.log("===== 펑션타입(function) ======");
+function f1(a,b){
+    return a+b;
+}
+
+var f2 = function(a,b){
+    return a+b;
+}
+
+var f3 = new Function('a','b','return a+b;');
+
+console.log("f1(10,20) 함수값: " + f1(10,20) + ", 함수 타입: " + typeof(f1) + ", f1 instanceof(Function): "+(f1 instanceof(Function)));
+console.log("f2(10,20) 함수값: " + f2(10,20) + ", 함수 타입: " + typeof(f2) + ", f2 instanceof(Function): "+(f2 instanceof(Function)));
+console.log("f3(10,20) 함수값: " + f3(10,20) + ", 함수 타입: " + typeof(f3) + ", f3 instanceof(Function): "+(f3 instanceof(Function)));
 
 
 // 유사 객체 
