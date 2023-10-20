@@ -3,9 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+window.onload=function() {
+	setTimeout(function(){
+		var imgElement = document.createElement("img");
+		
+		// getAttribute/ set Attribute
+		// 표준속성 : 사용가능, 이름으로 가능하다.
+		// 비표준 속성 : 사용가능, 이름으로 불가능하다.
+		imgElement.setAttribute('src','https://mgall.app/api/file/10110971');
+		imgElement.setAttribute('style','width = 300px');
+		imgElement.setAttribute('alt', '뚱이쓰');
+		imgElement.setAttribute('title' , '뚱');
+		
+		// imgElement.no = 10; 안됨.
+		// 비표준 성을 사용할 때는 'data-' prefix를 달아준다.
+		// imgElement.setAttribute('data-no',10); 
+		imgElement.setAttribute('no',10); 
+		
+		// 비표준 속성은 이름으로 접근할 수 없다.
+		console.log(imgElement.no, imgElement.getAttribute("no"), imgElement.alt);
+		
+		document.body.appendChild(imgElement);
+	},2000);
+}
+</script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>
 	<h2>3. HTML Element 속성 조작하기2</h2>
+	<img no="">
 </body>
 </html>

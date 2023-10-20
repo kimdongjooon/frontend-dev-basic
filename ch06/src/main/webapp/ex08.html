@@ -3,9 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+window.onload=function() {
+	setTimeout(function(){
+		var imgElement = document.createElement("img");
+		imgElement.src ='https://media.tenor.com/uNpJbEqGhkEAAAAi/%EB%9A%B1%EC%9D%B4%EC%9B%80%EC%A7%A4.gif';
+		imgElement.style.width = '300px';
+		imgElement.alt = '뚱이쓰';
+		imgElement.title = '뚱';
+		
+		document.body.appendChild(imgElement);
+		
+		
+	},2000);
+}
+</script>
 </head>
 <body>
-	<h1 id='h' data-no='10'>DOM(Document Object Model)</h1>
+	<h1>DOM(Document Object Model)</h1>
 	<h2>3. HTML Element 속성 조작하기1</h2>
+	<img src="">
+	
 </body>
 </html>

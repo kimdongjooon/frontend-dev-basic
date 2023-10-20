@@ -3,7 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="/ch06/browser-detect.js"></script>
+<script>
+	BrowserDetect.init();
+	console.log(BrowserDetect.browser, BrowserDetect.version, BrowserDetect.OS);
+	console.log(navigator.userAgent, navigator.vendor);
+</script>
 </head>
+
 <body>
 	<h1>BOM(Browser Object Model)</h1>
 	<h2>4. navigator 객체</h2>
