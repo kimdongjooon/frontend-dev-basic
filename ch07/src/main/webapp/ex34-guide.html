@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>sample1</title>
+<link href='image-viewer.css' type='text/css' rel="stylesheet"/>
+<script type="text/javascript" src="./jquery/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+
+var images = [ 
+	"국화:Chrysanthemum.jpg", 
+	"사막:Desert.jpg", 
+	"수국:Hydrangeas.jpg", 
+	"해파리:Jellyfish.jpg", 
+	"코알라:Koala.jpg", 
+	"등대:Lighthouse.jpg", 
+	"펭귄:Penguins.jpg", 
+	"툴립:Tulips.jpg" ];
+
+var RandomImage =function(){
+	// 랜덤 변수 
+	var result = Math.floor( Math.random() * images.length);
+	console.log(images[result].split(":")[0]);
+	console.log(images[result].split(":")[1]);
+	$('.image-viewer img')
+		.attr({
+				src:'/ch07/images/'+images[result].split(":")[1],
+				alt:images[result].split(":")[0], // 새텝으로 뜨게하기.
+				title:images[result].split(":")[0] // 말풍선 뜨게하기.
+			})
+};
+
+var interval = null;
+var flashImage = function(){
+	if($("#btn-slideshow").hasClass('start')){
+		$("#btn-slideshow")
+			.removeClass("start")
+			.text('슬라이드쇼 시작');
+		clearInterval(interval);
+	}else{
+		$("#btn-slideshow")
+			.attr('class','start')
+			.text('슬라이드쇼 중지');
+		interval = setInterval(function(){
+				RandomImage();
+		},1000);
+	}
+}
+
+
+
+$(function(){
+	$("#btn-change").click(function(){
+		RandomImage();
+	});
+	
+	$("#btn-slideshow").click(function(){
+		flashImage();
+	});
+	
+
+});
+
+</script>
+</head>
+<body>
+	<div class="image-viewer">
+		<div class="buttons">
+			<button id="btn-change">이미지변경</button>
+			<button id="btn-slideshow">슬라이드쇼 시작</button>
+			
+		</div>
+		<div>
+			<img src="/ch07/images/Desert.jpg" alt="사막", title="사막"/>
+		</div>
+	</div>
+</body>
+</html>

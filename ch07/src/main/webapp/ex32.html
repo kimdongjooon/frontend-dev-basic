@@ -6,6 +6,30 @@
 <script type="text/javascript">
 $(function() {
 	setTimeout(function(){
+		/*
+		$('h2 a').attr('href',"https://www.poscodx.com");
+		$('h2 a').attr('target',"_blank"); // 새텝으로 뜨게하기.
+		$('h2 a').attr('title',"우리회사 좋은회사."); // 말풍선 뜨게하기.
+		$('h2 a').css("font-size","0.75em");
+		*/
+		
+		// 함수 체인
+		/*
+		$('h2 a')
+			.attr('href',"https://www.poscodx.com")
+			.attr('target',"_blank") // 새텝으로 뜨게하기.
+			.attr('title',"우리회사 좋은회사.") // 말풍선 뜨게하기.
+			.css("font-size","0.75em");
+		*/
+		
+		// 객체로 사용하기.
+		$('h2 a')
+			.attr({
+				href:"https://www.poscodx.com",
+				target:"_blank", // 새텝으로 뜨게하기.
+				title:"우리회사 좋은회사.", // 말풍선 뜨게하기.
+			})
+			.css("font-size","0.75em");
 	}, 2000);
 });  
 </script>
