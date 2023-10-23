@@ -4,11 +4,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript" src="jquery/jquery-simple.js"></script>
 <script>
+//console.log(jQuery().jquery);
+	
 $(function(){
 	var $obj = $(".par");
+	
+	console.log(
+			typeof(jQuery), 			// jQuery는 function 객체.
+			typeof($obj), 				// object type 객체를 반환한다.: jQuery 객체.
+			"length: "+ $obj.length,	// 객수가 있음. 해당 검색한 태그의 개수.
+			$obj instanceof Array		// 하지만 배열은 아님, 유사 배열. 
+		);
+	
+	
 	$obj.click(function(){
 		console.log("clicked:" + this);
 	});
+	
 
 	setTimeout(function(){
 		$obj.css('color', 'red');
@@ -19,6 +31,7 @@ $(function(){
 	}, 4000);
 
 });
+
 </script>
 </head>
 <body>
