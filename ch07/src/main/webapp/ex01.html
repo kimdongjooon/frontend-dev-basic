@@ -2,9 +2,43 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- 소스버전(애플리케이션 서버 호스팅) -->
+<!-- <script src="/ch07/jquery/jquery-3.7.1.js"></script> -->
+
+<!-- 압축버전(애플리케이션 서버 호스팅) -->
+<!--<script src="/ch07/jquery/jquery-3.7.1.min.js"></script>-->
+
+<!-- 소스버전(CDN 호스팅) -->
+<!--<script src="http://code.jquery.com/jquery-3.7.1.js"></script>-->
+
+<!-- 압축버전(CDN 호스팅) -->
+<script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+console.log(jQuery().jquery, $().jquery);
+
+window.addEventListener('load', function(){
+	setTimeout(function(){
+		// jquery object
+		var $obj = jQuery('h1');
+		
+		console.log(
+			typeof(jQuery), 			// jQuery는 function 객체.
+			typeof($obj), 				// object type 객체를 반환한다.: jQuery 객체.
+			"length: "+ $obj.length,	// 객수가 있음. 해당 검색한 태그의 개수.
+			$obj instanceof Array		// 하지만 배열은 아님, 유사 배열. 
+		);
+		
+		$obj.css()
+	}, 2000)
+	
+	
+})
+</script>
 </head>
 <body>
-	<h1>jQuery 로딩</h1>
+	<h1>jQuery 로딩1</h1>
+	<h1>jQuery 로딩2</h1>
 </body>
 </html>
  
