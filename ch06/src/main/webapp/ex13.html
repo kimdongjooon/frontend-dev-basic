@@ -3,6 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+/*
+기본 이벤트 동작 막기
+1. anchor: spa 애플리케이션에서 버튼이나 메뉴를 사용할 때.
+2. from: valdation, ajax 방식으로 submit
+*/
+window.addEventListener('load', function(){
+	document
+		.getElementById("btn-delete")
+		.addEventListener('click', function(event){
+			event.preventDefault(); // a태그에서 페이징 재로딩하는거 막아줌.
+			console.log("비밀번호 일엽 다이얼고르 뛰우기");
+		});
+})
+</script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>

@@ -3,6 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+/*
+기본 이벤트 동작 막기
+1. anchor: spa 애플리케이션에서 버튼이나 메뉴를 사용할 때.
+2. from: valdation, ajax 방식으로 submit
+*/
+window.addEventListener('load',function(){
+	document
+		.getElementById('form-login')
+		.onsubmit = function(){
+			return false;
+		}
+})
+
+</script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>
