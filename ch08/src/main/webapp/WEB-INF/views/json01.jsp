@@ -14,7 +14,7 @@ $(function(){
 	$('button').click(function(){
 		$.ajax({
 			url:'${pageContext.request.contextPath}/api/json01'	,	// 연결 fetch
-			async: true, 											// 비동기 통신 
+			async: true, 											// 비동기 통신 default
 			type: 'get',
 			dataType: 'json',										// 서버에서 해당데이터 타입으로 받음.
 			success: function(response){
