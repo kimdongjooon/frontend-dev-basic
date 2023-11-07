@@ -20,7 +20,9 @@ $(function(){
 		var dh = $document.height();
 		var st = $window.scrollTop();
 		
-		if(dh < wh + st + 10){
+		console.log("wh + st : "+(wh + st)+ "("+wh +":"+st+")");
+		console.log("dh: "+dh);
+		if(dh < wh + st){
 			console.log("fetch!!");
 		}
 	});
